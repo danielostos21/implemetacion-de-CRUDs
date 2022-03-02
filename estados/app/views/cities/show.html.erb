@@ -1,0 +1,16 @@
+<br/>
+<div class="container">
+  <h1 class="display-1"><%=@city.name%></h1><br/>
+  <% actual_state = @city.state %> 
+  <h2 class="display-6"><strong>State: </strong><%= link_to actual_state.name, actual_state %><h2>
+  
+
+  <div>
+    <%= link_to "Edit this city", edit_city_path(@city), class:"btn btn-secondary", style:"background-color:#2F4F4F"%> |
+    <%= link_to "Back to cities", cities_path, class:"btn btn-secondary"%>
+    <br/><br/>
+    <%= button_to "Destroy this city", @city, method: :delete, class:"btn btn-danger" %>
+  </div>  
+</div>
+
+

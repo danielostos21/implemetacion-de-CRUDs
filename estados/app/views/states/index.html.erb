@@ -1,0 +1,20 @@
+<br/>
+<h1 class="display-4">State's List</h1>
+<br/>
+<table class="table table-striped " style="width: 50%;" >
+
+   <thead style="background-color:#708090;">
+    <tr >
+      <th scope="col" style="color:#fff">Name</th>
+      <th colspan="2" style="color:#fff"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% list = @states.sort{|x,y| x[:name] <=> y[:name]}  %>
+    <% list.each do |state| %>
+      <%= render state %>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New state", new_state_path, class:"btn btn-secondary", style:"background-color:#2F4F4F" %>

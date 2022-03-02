@@ -1,0 +1,8 @@
+<div id="<%= dom_id city %>">
+  <tr>
+    <td> <%= city.name %></td>
+    <td> <%= State.find_by(id: city.state_id).name %></td>
+    <td><%= link_to 'Show', city, class:"btn btn-sm btn-secondary" %></td>
+    <td><%= link_to 'Edit', edit_city_path(city),class:"btn btn-sm btn-secondary" %></td>
+  </tr>
+</div>

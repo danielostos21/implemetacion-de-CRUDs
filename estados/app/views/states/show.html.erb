@@ -1,0 +1,38 @@
+<br/>
+<div class="container">
+  <h1 class="display-1"><%=@state.name%></h1>
+  <br/>
+  
+    <%list = @state.cities%>
+
+  <% unless list.nil?%>
+
+  <table class="table table-striped " style="width: 50%;" >
+
+   <thead style="background-color:#708090;">
+    <tr >
+      <th scope="col" style="color:#fff">Cities</th>
+      <th colspan="2" style="color:#fff"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+      <% list.each do |city| %>
+        <td> <%= city.name %></td>
+        <td><%= link_to 'Show', city, class:"btn btn-sm btn-secondary" %></td>
+        <td><%= link_to 'Edit', edit_city_path(city),class:"btn btn-sm btn-secondary" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<%end%>
+
+<div>
+  <%= link_to "Edit this state", edit_state_path(@state), class:"btn btn-secondary", style:"background-color:#2F4F4F" %> |
+  <%= link_to "Back to states", states_path , class:"btn btn-secondary"%>
+
+  <br/><br/>
+
+  <%= button_to "Destroy this state", @state, method: :delete , class:"btn btn-danger" %>
+</div>

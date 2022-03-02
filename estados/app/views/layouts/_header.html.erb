@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#2F4F4F;">
+  <div class="container-fluid">
+    <%= link_to 'States App', root_path , class:"navbar-brand"  %>
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            States
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"style="background-color:#DCDCDC;">
+            <li><a><%= link_to 'List of States', states_path, class:"dropdown-item" %></a></li>
+            <li><a><%= link_to 'Add a State', new_state_path, class:"dropdown-item" %>  </a></li>
+      
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Cities
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#DCDCDC;">
+            <li><a><%= link_to 'List of Cities', cities_path, class:"dropdown-item" %> </a></li>
+            <li><a><%= link_to 'Add a City', new_city_path, class:"dropdown-item" %></a></li>
+      
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

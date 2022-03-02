@@ -1,0 +1,23 @@
+<br/>
+<h1 class="display-4">Citie's List</h1>
+
+<br/>
+<table class="table table-striped " style="width: 50%;" >
+
+   <thead style="background-color:#708090;">
+    <tr >
+      <th scope="col" style="color:#fff">Name</th>
+      <th scope="col" style="color:#fff">State</th>
+      <th colspan="2" style="color:#fff"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% list = @cities.sort{|x,y| x[:name] <=> y[:name]}  %>
+    <% list.each do |city| %>
+      <%= render city %>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to "New city", new_city_path , class:"btn btn-secondary", style:"background-color:#2F4F4F"%>
